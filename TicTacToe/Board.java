@@ -2,7 +2,7 @@ package Games.TicTacToe;
 
 public class Board {
     int size;
-    char[][] matrix;
+    public char[][] matrix;
 
     public Board(int n){
         this.size = n;

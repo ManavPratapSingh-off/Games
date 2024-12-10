@@ -19,6 +19,7 @@ public class Player {
         }
         else{
             b.set(i, j, symbol);
+            // b.matirx[i][j] = this.symbol;
         }
     }
     
