@@ -4,12 +4,13 @@ import java.util.Scanner;
 public class Player {
     char symbol;
 
-    Player(char ch){
+    public Player(char ch){
         this.symbol = ch;
     }
 
     public void provideInput(Board b){
-        Scanner sc = new Scanner();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Make your move : ");
         int i = sc.nextInt();
         int j = sc.nextInt();
         if(i<0 || j<0 || i>=b.size || j>=b.size || b.get(i, j) != '_' ){
@@ -17,7 +18,7 @@ public class Player {
             this.provideInput(b);
         }
         else{
-            b.set(i, j, this.symbol);
+            b.set(i, j, symbol);
         }
     }
     
